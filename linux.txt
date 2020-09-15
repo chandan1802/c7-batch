@@ -1,0 +1,225 @@
+[chandan@localhost ~]$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[chandan@localhost ~]$ cat > chan
+hi chandan
+^C
+[chandan@localhost ~]$ 
+[chandan@localhost ~]$ ls
+chan  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[chandan@localhost ~]$ touch fi f2
+[chandan@localhost ~]$ ls
+chan  Desktop  Documents  Downloads  f2  fi  Music  Pictures  Public  Templates  Videos
+[chandan@localhost ~]$ tee a1 a2
+hello world
+hello world
+devops course
+devops course
+^C
+[chandan@localhost ~]$ 
+[chandan@localhost ~]$ ls
+a1  a2  chan  Desktop  Documents  Downloads  f2  fi  Music  Pictures  Public  Templates  Videos
+[chandan@localhost ~]$ rm a1
+[chandan@localhost ~]$ ls
+a2  chan  Desktop  Documents  Downloads  f2  fi  Music  Pictures  Public  Templates  Videos
+[chandan@localhost ~]$ 
+[chandan@localhost ~]$ 
+[chandan@localhost ~]$ 
+[chandan@localhost ~]$ 
+[chandan@localhost ~]$ rm a2 f1 f2
+rm: cannot remove `f1': No such file or directory
+[chandan@localhost ~]$ ls
+chan  Desktop  Documents  Downloads  fi  Music  Pictures  Public  Templates  Videos
+[chandan@localhost ~]$ su
+Password: 
+[root@localhost chandan]# 
+[root@localhost chandan]# 
+[root@localhost chandan]# ls
+chan  Desktop  Documents  Downloads  fi  Music  Pictures  Public  Templates  Videos
+[root@localhost chandan]# rm f1
+rm: cannot remove `f1': No such file or directory
+[root@localhost chandan]# rm fi
+rm: remove regular empty file `fi'? y
+[root@localhost chandan]# 
+[root@localhost chandan]# ls
+chan  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost chandan]# 
+[root@localhost chandan]# 
+[root@localhost chandan]# cat > char
+hi
+^C
+[root@localhost chandan]# 
+[root@localhost chandan]# 
+[root@localhost chandan]# ls
+chan  char  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost chandan]# rm -f char
+[root@localhost chandan]# ls
+chan  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost chandan]# touch globes
+[root@localhost chandan]# 
+[root@localhost chandan]# ls
+chan  Desktop  Documents  Downloads  globes  Music  Pictures  Public  Templates  Videos
+[root@localhost chandan]# cat globes
+[root@localhost chandan]# ls
+chan  Desktop  Documents  Downloads  globes  Music  Pictures  Public  Templates  Videos
+[root@localhost chandan]# mkdir devops
+[root@localhost chandan]# ls
+chan  Desktop  devops  Documents  Downloads  globes  Music  Pictures  Public  Templates  Videos
+[root@localhost chandan]# cd devops
+[root@localhost devops]# ls
+[root@localhost devops]# mkdir chandan
+[root@localhost devops]# ls
+chandan
+[root@localhost devops]# touch charan
+[root@localhost devops]# ls
+chandan  charan
+[root@localhost devops]# cd chandan
+[root@localhost chandan]# cat charu
+cat: charu: No such file or directory
+[root@localhost chandan]# cs chary
+bash: cs: command not found
+[root@localhost chandan]# cat charu
+cat: charu: No such file or directory
+[root@localhost chandan]# ls
+[root@localhost chandan]# 
+[root@localhost chandan]# cd devops
+bash: cd: devops: No such file or directory
+[root@localhost chandan]# exit
+exit
+[chandan@localhost ~]$ ls
+chan  Desktop  devops  Documents  Downloads  globes  Music  Pictures  Public  Templates  Videos
+[chandan@localhost ~]$ cd devops
+[chandan@localhost devops]$ ls
+chandan  charan
+[chandan@localhost devops]$ mkdir ravi
+mkdir: cannot create directory `ravi': Permission denied
+[chandan@localhost devops]$ su
+Password: 
+[root@localhost devops]# mkdir ravi
+[root@localhost devops]# touch a1 a2 a3
+[root@localhost devops]# 
+[root@localhost devops]# ls
+a1  a2  a3  chandan  charan  ravi
+[root@localhost devops]# pwd
+/home/chandan/devops
+[root@localhost devops]# cd a3
+bash: cd: a3: Not a directory
+[root@localhost devops]# cd ravi
+[root@localhost ravi]# pwd
+/home/chandan/devops/ravi
+[root@localhost ravi]# cd ../..
+[root@localhost chandan]# pwd
+/home/chandan
+[root@localhost chandan]# cd devops
+[root@localhost devops]# cd ravi
+[root@localhost ravi]# cd ..
+[root@localhost devops]# pwd
+/home/chandan/devops
+[root@localhost devops]# cd devop
+bash: cd: devop: No such file or directory
+[root@localhost devops]# cd devops
+bash: cd: devops: No such file or directory
+[root@localhost devops]# cd ravi
+[root@localhost ravi]# owd
+bash: owd: command not found
+[root@localhost ravi]# pwd
+/home/chandan/devops/ravi
+[root@localhost ravi]# cd ../..
+[root@localhost chandan]# pwd
+/home/chandan
+[root@localhost chandan]# cd.
+bash: cd.: command not found
+[root@localhost chandan]# cd .
+[root@localhost chandan]# pwd
+/home/chandan
+[root@localhost chandan]# rmdir ravi
+rmdir: failed to remove `ravi': No such file or directory
+[root@localhost chandan]# rmdir history
+rmdir: failed to remove `history': No such file or directory
+[root@localhost chandan]# history
+    1  ls
+    2  rm f1
+    3  rm fi
+    4  ls
+    5  cat > char
+    6  ls
+    7  rm -f char
+    8  ls
+    9  touch globes
+   10  ls
+   11  cat globes
+   12  ls
+   13  mkdir devops
+   14  ls
+   15  cd devops
+   16  ls
+   17  mkdir chandan
+   18  ls
+   19  touch charan
+   20  ls
+   21  cd chandan
+   22  cat charu
+   23  cs chary
+   24  cat charu
+   25  ls
+   26  cd devops
+   27  exit
+   28  mkdir ravi
+   29  touch a1 a2 a3
+   30  ls
+   31  pwd
+   32  cd a3
+   33  cd ravi
+   34  pwd
+   35  cd ../..
+   36  pwd
+   37  cd devops
+   38  cd ravi
+   39  cd ..
+   40  pwd
+   41  cd devop
+   42  cd devops
+   43  cd ravi
+   44  owd
+   45  pwd
+   46  cd ../..
+   47  pwd
+   48  cd.
+   49  cd .
+   50  pwd
+   51  rmdir ravi
+   52  rmdir history
+   53  history
+[root@localhost chandan]# pwd
+/home/chandan
+[root@localhost chandan]# cd chandan
+bash: cd: chandan: No such file or directory
+[root@localhost chandan]# ls
+chan  Desktop  devops  Documents  Downloads  globes  Music  Pictures  Public  Templates  Videos
+[root@localhost chandan]# cd devops
+[root@localhost devops]# ls
+a1  a2  a3  chandan  charan  ravi
+[root@localhost devops]# cd chandan
+[root@localhost chandan]# ls
+[root@localhost chandan]# pwd
+/home/chandan/devops/chandan
+[root@localhost chandan]# mkdir chandan
+[root@localhost chandan]# ls
+chandan
+[root@localhost chandan]# cd devops
+bash: cd: devops: No such file or directory
+[root@localhost chandan]# cd ravi
+bash: cd: ravi: No such file or directory
+[root@localhost chandan]# ls
+chandan
+[root@localhost chandan]# pwd
+/home/chandan/devops/chandan
+[root@localhost chandan]# rmdir chandan
+[root@localhost chandan]# ls
+[root@localhost chandan]# cd devops
+bash: cd: devops: No such file or directory
+[root@localhost chandan]# cd .
+[root@localhost chandan]# ls
+[root@localhost chandan]# cd ..
+[root@localhost devops]# ls
+a1  a2  a3  chandan  charan  ravi
+[root@localhost devops]# 
